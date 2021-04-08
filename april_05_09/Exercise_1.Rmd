@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Exercise 1
 
+All info from _Wikipedia_
+
 
 ## 1. A brief description of the show
 
@@ -38,4 +40,11 @@ summary(df$viewers_rank)
 ```
 
 
+## 4. A graph of the viewership over time (seasons)
+
+
+```{r}
+library(ggplot2)
+ggplot(data=df, aes(x = season, y = viewers_mln)) + geom_line() + geom_point()
+```
 
