@@ -26,3 +26,16 @@ _Once Upon a Time_ is an American fairy tale drama television series created by 
 
 
 
+## 3. A summary of season ratings
+
+
+```{r}
+season <- c(seq(1,7))
+viewers_mln <- c(11.71, 10.24, 9.38, 8.98, 6.32, 4.39, 3.41)
+viewers_rank <- c(28, 35, 35, 50, 69, 105, 120)
+df <- data.frame(season, viewers_mln, viewers_rank)
+summary(df$viewers_rank)
+```
+
+
+
