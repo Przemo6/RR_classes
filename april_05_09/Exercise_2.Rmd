@@ -4,15 +4,24 @@ author: "Wojciech Hardy; Michał Paliński"
 date: "3/21/2021"
 output: html_document
 params:
-  data: "Data/season_1.RData"
+  season: 1
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-#load("Data/season_1.RData")
+load("Data/season_1.RData")
+load("Data/season_2.RData")
+load("Data/season_3.RData")
+load("Data/season_4.RData")
+load("Data/season_5.RData")
+load("Data/season_6.RData")
+load("Data/season_7.RData")
+load("Data/season_8.RData")
+
+
 ```
 
-# Game of Thrones - Season 1 summary in numbers
+# Game of Thrones - Season `r params$season` summary in numbers
 
 ### __(*Warning:* spoilers ahead)__
 
@@ -26,9 +35,9 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 
 ***
 
-### Season 1 summary
+### Season `r params$season` summary
 
-Season 1 of Game of Thrones consisted of `r params$data$no_season[-1]` episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of `r avg(params$data$viewers)` first-day TV viewers in the US, with the number growing from `r params$data$viewers[1]` to `r params$data$viewers[-1]` million by the end of the season.
+Season `r params$season` of Game of Thrones consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 312313 first-day TV viewers in the US, with the number growing from 2131 to 12313131 million by the end of the season.
 
 The most popular episode of the season was "Fire and Blood", in which:
 

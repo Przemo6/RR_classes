@@ -26,7 +26,7 @@ It's helpful when:
 - there's several documents that we want to have similar settings.
 - we work with a team and want everyone to use the same settings.
 
-2)	The file name should be _“_output.yaml”_. It can be opened in notepad and takes the same input as YAML.
+2)	The file name should be _“\_output.yaml”_. It can be opened in notepad and takes the same input as YAML.
 
 We can cut a part from the original document and paste it in the file, e.g.:
 
