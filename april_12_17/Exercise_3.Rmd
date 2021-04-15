@@ -1,0 +1,53 @@
+---
+title: "Exercise 1"
+author: "Przemysław Mazurek"
+date: "8 04 2021"
+output:
+  ioslides_presentation:
+    incremental: yes
+    transition: 2
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exercise 1
+
+All info from _Wikipedia_
+
+
+## 1. A brief description of the show
+
+
+_Once Upon a Time_ is an American fairy tale drama television series created by _Edward Kitsis_ and _Adam Horowitz_, who also serve as executive producers alongside _Steve Pearlman_. It debuted on _ABC_ on October 23, 2011. The first season introduces a bail bond agent, _Emma Swan_ (_Jennifer Morrison_) and her birth-son, _Henry Mills_ (_Jared S. Gilmore_), who discover that a New England town named _Storybrooke_, _Maine_ is actually a remnant of a parallel world that was cursed by _Henry's_ adoptive mother the _Evil Queen/Mayor Regina Mills_ (_Lana Parrilla_) and that all the characters from the fairy tales have no memories of who they were, including the parents of _Emma_: _Snow White/Mary Margaret Blanchard_ (_Ginnifer Goodwin_) and _Prince Charming/David Nolan_ (_Josh Dallas_), who sent her to the real world to save their world and break the curse.
+
+
+## 2. A photo with a logo
+
+
+![Logo](Data/375px-Once_Upon_a_Time_title_card.jpg)
+
+
+## 3. A summary of season ratings 
+
+```{r}
+season <- c(seq(1,7))
+viewers_mln <- c(11.71, 10.24, 9.38, 8.98, 6.32, 4.39, 3.41)
+viewers_rank <- c(28, 35, 35, 50, 69, 105, 120)
+df <- data.frame(season, viewers_mln, viewers_rank)
+summary(df$viewers_rank)
+```
+
+
+## 4. A graph of the viewership over time (seasons) {data-background=Data/375px-Once_Upon_a_Time_title_card.jpg}
+
+
+
+```{r}
+library(ggplot2)
+ggplot(data=df, aes(x = season, y = viewers_mln)) + geom_line() + geom_point()
+```
+
